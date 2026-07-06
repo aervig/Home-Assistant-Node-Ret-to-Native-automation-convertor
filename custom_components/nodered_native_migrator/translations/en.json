@@ -1,0 +1,29 @@
+{
+  "title": "Node-RED Native Migrator",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Node-RED Native Migrator",
+        "description": "Set defaults used when running conversion services. You can change these later in integration options.\\n\\nRecommended first setup:\\n- Domain filter: leave empty (convert all)\\n- Output file: /config/automations_migrated.yaml\\n- Output mode: merge_list",
+        "data": {
+          "filter_domain": "Integration/domain filter (optional, e.g. vacuum, light)",
+          "default_output_file": "Output YAML file path (e.g. /config/automations_migrated.yaml)",
+          "default_mode": "Output mode (merge_list for automations file, ui_single for UI YAML editor)"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Node-RED Native Migrator options",
+        "description": "Update defaults for later conversion runs.",
+        "data": {
+          "filter_domain": "Integration/domain filter (optional, e.g. vacuum, light)",
+          "default_output_file": "Output YAML file path (e.g. /config/automations_migrated.yaml)",
+          "default_mode": "Output mode (merge_list for automations file, ui_single for UI YAML editor)"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+convert_flow_file:
+  name: Convert Node-RED flow file
+  description: Convert Node-RED JSON export to native Home Assistant automations.
+  fields:
+    nodered_file:
+      name: Node-RED file path
+      description: Absolute path to Node-RED JSON export file.
+      required: true
+      selector:
+        text:
+    output_file:
+      name: Output YAML file
+      description: Output path for converted automations.
+      required: false
+      selector:
+        text:
+    mode:
+      name: Output mode
+      description: ui_single creates one automation object, merge_list creates a YAML list.
+      required: false
+      default: merge_list
+      selector:
+        select:
+          options:
+            - ui_single
+            - merge_list
+    filter_domain:
+      name: Integration/domain filter
+      description: Optional filter (e.g. vacuum, light, climate).
+      required: false
+      selector:
+        text:
+
+build_overview_dashboard:
+  name: Build overview dashboard
+  description: Build a dashboard YAML grouped by integration/domain from the latest conversion.
+  fields:
+    integration_index_file:
+      name: Integration index file
+      description: Optional path to index file created by conversion.
+      required: false
+      selector:
+        text:
+    output_file:
+      name: Output dashboard YAML
+      description: Output file path for dashboard YAML.
+      required: false
+      default: dashboards/nodered_migrated_overview.yaml
+      selector:
+        text:

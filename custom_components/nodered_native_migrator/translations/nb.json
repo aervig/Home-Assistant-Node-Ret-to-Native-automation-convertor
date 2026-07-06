@@ -1,0 +1,29 @@
+{
+  "title": "Node-RED Native Migrator",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Node-RED Native Migrator",
+        "description": "Sett standardvalg som brukes nar du kjorer konverteringstjenestene. Dette kan endres senere under integrasjonsvalg.\\n\\nAnbefalt forstegangsoppsett:\\n- Integrasjonsfilter: la sta tomt (konverter alle)\\n- Output-fil: /config/automations_migrated.yaml\\n- Output-modus: merge_list",
+        "data": {
+          "filter_domain": "Integrasjons/domain-filter (valgfritt, f.eks. vacuum, light)",
+          "default_output_file": "Sti til output YAML-fil (f.eks. /config/automations_migrated.yaml)",
+          "default_mode": "Output-modus (merge_list for automasjonsfil, ui_single for YAML-editor i UI)"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Valg for Node-RED Native Migrator",
+        "description": "Oppdater standardvalg for senere konverteringskjoringer.",
+        "data": {
+          "filter_domain": "Integrasjons/domain-filter (valgfritt, f.eks. vacuum, light)",
+          "default_output_file": "Sti til output YAML-fil (f.eks. /config/automations_migrated.yaml)",
+          "default_mode": "Output-modus (merge_list for automasjonsfil, ui_single for YAML-editor i UI)"
+        }
+      }
+    }
+  }
+}
